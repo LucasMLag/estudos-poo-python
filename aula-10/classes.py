@@ -1,0 +1,21 @@
+# superclasse
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+        self.nomeclasse = self.__class__.__name__
+
+    def falar(self):
+        print(f'{self.nomeclasse} está falando...')
+
+
+# subclasse 'Cliente', herda a classe 'Pessoa'
+class Cliente(Pessoa):
+    def comprar(self):
+        print(f'{self.nomeclasse} está comprando...')
+
+
+# subclasse 'Aluno', herda a classe 'Pessoa'
+class Aluno(Pessoa):
+    def estudar(self):
+        print(f'{self.nomeclasse} está estudando...')
